@@ -15,10 +15,10 @@ Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
-SQL-Statement - SQL parsing and processing engine
+SQL-Statement - SQL parsing and processing engine.
 
 %description -l pl
-SQL-Statement - mechanizm przetwarzania SQL
+SQL-Statement - mechanizm przetwarzania SQL.
 
 %prep
 %setup -q -n SQL-Statement-%{version}
