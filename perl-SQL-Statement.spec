@@ -10,7 +10,7 @@ Summary(pl):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
 Version:	1.005
 Release:	2
-License:	GPL
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6299480a95c16ba60e0f69e6a4c0cb9d
