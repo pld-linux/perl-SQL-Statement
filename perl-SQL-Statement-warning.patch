@@ -1,0 +1,13 @@
+diff -durN SQL-Statement-1.004.orig/Makefile.PL SQL-Statement-1.004/Makefile.PL
+--- SQL-Statement-1.004.orig/Makefile.PL	Wed Mar 13 22:47:21 2002
++++ SQL-Statement-1.004/Makefile.PL	Thu Jul 11 08:19:59 2002
+@@ -17,9 +17,6 @@
+ See the README for details.
+ 
+ END_OF_WARNING
+-print "Press enter to continue ... ";
+-my $x = <STDIN>;
+-last if $x;
+   }
+ };
+ 
