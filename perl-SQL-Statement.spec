@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	SQL
-%define	pnam	Statement
+%define		pdir	SQL
+%define		pnam	Statement
 Summary:	SQL::Statement - SQL parsing and processing engine
 Summary(pl):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
