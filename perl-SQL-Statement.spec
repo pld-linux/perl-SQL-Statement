@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	SQL
 %define	pnam	Statement
-%include	/usr/lib/rpm/macros.perl
 Summary:	SQL-Statement perl module
 Summary(pl):	Modu³ perla SQL-Statement
 Name:		perl-SQL-Statement
 Version:	0.1021
-Release:	2
-
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -21,7 +20,7 @@ SQL-Statement - SQL parsing and processing engine.
 SQL-Statement - mechanizm przetwarzania SQL.
 
 %prep
-%setup -q -n SQL-Statement-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
