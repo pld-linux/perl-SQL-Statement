@@ -3,7 +3,7 @@ Summary:	SQL-Statement perl module
 Summary(pl):	Modu³ perla SQL-Statement
 Name:		perl-SQL-Statement
 Version:	0.1017
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
