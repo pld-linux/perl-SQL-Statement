@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	SQL
 %define		pnam	Statement
-Summary:	SQL::Statement Perl module - SQL parsing and processing engine
-Summary(pl):	Modu³ Perla SQL::Statement - przetwarzanie i analiza SQL
+Summary:	SQL::Statement - SQL parsing and processing engine
+Summary(pl):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
 Version:	1.005
 Release:	1
