@@ -9,13 +9,13 @@ Summary:	SQL::Statement - SQL parsing and processing engine
 Summary(pl):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
 Version:	1.005
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-warning.patch
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,7 +37,8 @@ XML, CSV, dane o sta³ym rozmiarze, arkusze Excela i wiele innych.
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -53,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/SQL/Dialects
-%{perl_sitelib}/SQL/Statement
-%{perl_sitelib}/SQL/*.pm
+%{perl_vendorlib}/SQL/Dialects
+%{perl_vendorlib}/SQL/Statement
+%{perl_vendorlib}/SQL/*.pm
 %{_mandir}/man3/*
