@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	SQL
 %define	pnam	Statement
-Summary:	SQL-Statement perl module
-Summary(pl):	Modu³ perla SQL-Statement
+Summary:	SQL::Statement perl module
+Summary(pl):	Modu³ perla SQL::Statement
 Name:		perl-SQL-Statement
 Version:	0.1021
 Release:	3
@@ -14,10 +14,10 @@ BuildRequires:	perl >= 5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-SQL-Statement - SQL parsing and processing engine.
+SQL::Statement - SQL parsing and processing engine.
 
 %description -l pl
-SQL-Statement - mechanizm przetwarzania SQL.
+SQL::Statement - mechanizm przetwarzania SQL.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
