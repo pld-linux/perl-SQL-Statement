@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	SQL
 %define		pnam	Statement
@@ -20,7 +24,7 @@ Summary(uk):	Модуль для Perl SQL::Statement
 Summary(zh_CN):	SQL::Statement Perl дё©И
 Name:		perl-SQL-Statement
 Version:	1.004
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -43,6 +47,8 @@ SQL::Statement - mechanizm przetwarzania SQL.
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
+%{!?_without_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -54,5 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/SQL
+%{perl_sitelib}/SQL/Dialects
+%{perl_sitelib}/SQL/Statement
+%{perl_sitelib}/SQL/*.pm
 %{_mandir}/man3/*
