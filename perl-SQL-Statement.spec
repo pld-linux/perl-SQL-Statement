@@ -39,7 +39,7 @@ XML, CSV, dane o sta³ym rozmiarze, arkusze Excela i wiele innych.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:%{__make} test}
