@@ -5,39 +5,32 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	SQL
 %define		pnam	Statement
-Summary:	SQL::Statement Perl module
-Summary(cs):	Modul SQL::Statement pro Perl
-Summary(da):	Perlmodul SQL::Statement
-Summary(de):	SQL::Statement Perl Modul
-Summary(es):	Módulo de Perl SQL::Statement
-Summary(fr):	Module Perl SQL::Statement
-Summary(it):	Modulo di Perl SQL::Statement
-Summary(ja):	SQL::Statement Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	SQL::Statement ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul SQL::Statement
-Summary(pl):	Modu³ Perla SQL::Statement
-Summary(pt):	Módulo de Perl SQL::Statement
-Summary(pt_BR):	Módulo Perl SQL::Statement
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl SQL::Statement
-Summary(sv):	SQL::Statement Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl SQL::Statement
-Summary(zh_CN):	SQL::Statement Perl Ä£¿é
+Summary:	SQL::Statement Perl module - SQL parsing and processing engine
+Summary(pl):	Modu³ Perla SQL::Statement - przetwarzanie i analiza SQL
 Name:		perl-SQL-Statement
-Version:	1.004
-Release:	3
+Version:	1.005
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-warning.patch
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-SQL::Statement - SQL parsing and processing engine.
+Modules from this package can be used stand-alone to parse SQL
+statements or used with DBI and DBD::CSV, DBD::AnyData or other
+drivers to create, modify, and query data in many kinds of formats
+including XML, CSV, Fixed Length, Excel Spreadsheets and many others.
 
 %description -l pl
-SQL::Statement - mechanizm przetwarzania SQL.
+Modu³y z tego pakietu mog± byæ u¿ywane samodzielnie do analizy
+poleceñ SQL, jak te¿ razem ze sterownikami DBI i DBD::CSV,
+DBD::AnyData lub innymi, do tworzenia i modyfikacji danych oraz
+do wykonywania zapytañ przy u¿yciu danych w wielu formatach, w³±czaj±c
+XML, CSV, dane o sta³ym rozmiarze, arkusze Excela i wiele innych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -45,7 +38,7 @@ SQL::Statement - mechanizm przetwarzania SQL.
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %{!?_without_tests:%{__make} test}
 
