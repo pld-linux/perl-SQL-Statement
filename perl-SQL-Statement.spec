@@ -6,7 +6,7 @@
 %define		pdir	SQL
 %define		pnam	Statement
 Summary:	SQL::Statement - SQL parsing and processing engine
-Summary(pl):	SQL::Statement - silnik do przetwarzania i analizy SQL
+Summary(pl.UTF-8):   SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
 Version:	1.15
 Release:	1
@@ -26,12 +26,12 @@ statements or used with DBI and DBD::CSV, DBD::AnyData or other
 drivers to create, modify, and query data in many kinds of formats
 including XML, CSV, Fixed Length, Excel Spreadsheets and many others.
 
-%description -l pl
-Modu³y z tego pakietu mog± byæ u¿ywane samodzielnie do analizy
-poleceñ SQL, jak te¿ razem ze sterownikami DBI i DBD::CSV,
+%description -l pl.UTF-8
+ModuÅ‚y z tego pakietu mogÄ… byÄ‡ uÅ¼ywane samodzielnie do analizy
+poleceÅ„ SQL, jak teÅ¼ razem ze sterownikami DBI i DBD::CSV,
 DBD::AnyData lub innymi, do tworzenia i modyfikacji danych oraz
-do wykonywania zapytañ przy u¿yciu danych w wielu formatach, w³±czaj±c
-XML, CSV, dane o sta³ym rozmiarze, arkusze Excela i wiele innych.
+do wykonywania zapytaÅ„ przy uÅ¼yciu danych w wielu formatach, wÅ‚Ä…czajÄ…c
+XML, CSV, dane o staÅ‚ym rozmiarze, arkusze Excela i wiele innych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
