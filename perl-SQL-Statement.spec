@@ -6,7 +6,7 @@
 %define		pdir	SQL
 %define		pnam	Statement
 Summary:	SQL::Statement - SQL parsing and processing engine
-Summary(pl.UTF-8):   SQL::Statement - silnik do przetwarzania i analizy SQL
+Summary(pl.UTF-8):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
 Version:	1.15
 Release:	1
