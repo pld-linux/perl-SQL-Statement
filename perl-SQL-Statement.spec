@@ -8,17 +8,20 @@
 Summary:	SQL::Statement - SQL parsing and processing engine
 Summary(pl.UTF-8):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
-Version:	1.27
+Version:	1.33
 Release:	1
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/SQL/REHSACK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6c8866414d657b2ee36eef0c4db4164e
+# Source0-md5:	7c81e480630f60363fadb82f52095f3a
 URL:		http://search.cpan.org/dist/SQL-Statement/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
-BuildRequires:	perl-Clone
-BuildRequires:	perl-Params-Util
+BuildRequires:	perl-Clone >= 0.30
+BuildRequires:	perl-Params-Util >= 1.00
+BuildRequires:	perl-Scalar-List-Utils >= 1.0
+BuildRequires:	perl-Test-Simple >= 0.90
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -62,5 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/SQL/Dialects
 %{perl_vendorlib}/SQL/Statement
-%{perl_vendorlib}/SQL/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/SQL/Eval.pm
+%{perl_vendorlib}/SQL/Parser.pm
+%{perl_vendorlib}/SQL/Statement.pm
+%{_mandir}/man3/SQL::Dialects::*.3pm*
+%{_mandir}/man3/SQL::Eval.3pm*
+%{_mandir}/man3/SQL::Parser.3pm*
+%{_mandir}/man3/SQL::Statement*.3pm*
