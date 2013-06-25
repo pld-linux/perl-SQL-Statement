@@ -8,19 +8,18 @@
 Summary:	SQL::Statement - SQL parsing and processing engine
 Summary(pl.UTF-8):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
-Version:	1.33
+Version:	1.405
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/SQL/REHSACK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7c81e480630f60363fadb82f52095f3a
+# Source0-md5:	22231c2e28996b5bfea9925d49c11de1
 URL:		http://search.cpan.org/dist/SQL-Statement/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Clone >= 0.30
 BuildRequires:	perl-Params-Util >= 1.00
-BuildRequires:	perl-Scalar-List-Utils >= 1.0
 BuildRequires:	perl-Test-Simple >= 0.90
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
