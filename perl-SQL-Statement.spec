@@ -19,10 +19,15 @@ URL:		http://search.cpan.org/dist/SQL-Statement/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Clone >= 0.30
+BuildRequires:	perl-Math-Complex >= 1.56
+BuildRequires:	perl-Math-BigInt >= 1.88
 BuildRequires:	perl-Params-Util >= 1.00
 BuildRequires:	perl-Test-Simple >= 0.90
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+Conflicts:	perl-DBD-AnyData < 0.009
+Conflicts:	perl-DBD-CSV < 0.29
+Conflicts:	perl-DBI < 1.611
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
