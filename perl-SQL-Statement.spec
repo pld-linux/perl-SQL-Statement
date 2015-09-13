@@ -8,24 +8,29 @@
 Summary:	SQL::Statement - SQL parsing and processing engine
 Summary(pl.UTF-8):	SQL::Statement - silnik do przetwarzania i analizy SQL
 Name:		perl-SQL-Statement
-Version:	1.405
+Version:	1.407
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/SQL/REHSACK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	22231c2e28996b5bfea9925d49c11de1
+Source0:	http://www.cpan.org/modules/by-module/SQL/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	abeedda4a2c085613cb77fb01631e5de
 URL:		http://search.cpan.org/dist/SQL-Statement/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Clone >= 0.30
+BuildRequires:	perl-Math-Base-Convert
 BuildRequires:	perl-Math-Complex >= 1.56
 BuildRequires:	perl-Math-BigInt >= 1.88
 BuildRequires:	perl-Params-Util >= 1.00
+BuildRequires:	perl-Scalar-List-Utils >= 1.0
+BuildRequires:	perl-Test-Deep
 BuildRequires:	perl-Test-Simple >= 0.90
+BuildRequires:	perl-Text-Balanced
+BuildRequires:	perl-Text-Soundex >= 3.04
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
-Conflicts:	perl-DBD-AnyData < 0.009
+Conflicts:	perl-DBD-AnyData < 0.09
 Conflicts:	perl-DBD-CSV < 0.29
 Conflicts:	perl-DBI < 1.611
 BuildArch:	noarch
