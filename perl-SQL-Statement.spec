@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	SQL
 %define		pnam	Statement
 Summary:	SQL::Statement - SQL parsing and processing engine
